@@ -1,35 +1,60 @@
-# React + TypeScript + Vite
+# Sistema de Login
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Uma interface de login simples, responsiva e com tema escuro, criada para praticar **React**, **TypeScript** e **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A página apresenta um formulário com campos para e-mail e senha, botão de entrada e um link para cadastro. O visual usa fundo escuro, campos discretos e destaques em amarelo.
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Como executar
 
-## Expanding the Oxlint configuration
+1. Instale as dependências:
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+   ```bash
+   npm install
+   ```
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+2. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Abra no navegador o endereço mostrado no terminal — normalmente `http://localhost:5173`.
+
+## Scripts disponíveis
+
+| Comando | Descrição |
+| --- | --- |
+| `npm run dev` | Inicia o projeto em modo de desenvolvimento. |
+| `npm run build` | Gera uma versão otimizada para produção. |
+| `npm run preview` | Visualiza localmente a versão gerada pelo build. |
+| `npm run lint` | Analisa o código em busca de problemas. |
+
+## Estrutura principal
+
+```text
+src/
+├── App.tsx       # Componente principal da aplicação
+├── page.tsx      # Página da tela de login
+├── main.tsx      # Ponto de entrada do React
+└── index.css     # Importação do Tailwind CSS
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Próximos passos
+
+- Validar os campos do formulário.
+- Exibir mensagens de erro ao usuário.
+- Conectar o formulário a uma API de autenticação.
+- Criar a página de cadastro.
+
+---
+
+Feito como projeto de estudo.
